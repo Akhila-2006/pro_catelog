@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Catelog</title>
+  <style>
+    body {
+      margin: 5px;
+      font-family: Arial, sans-serif;
+    } 
+    .container {
+      display: flex;
+     
+    }
+    .sidebar {
+      width: 250px;
+      background-color:silver;
+      height: 100vh;
+      overflow-y: scroll;
+      padding: 20px;
+    }
+    .sidebar h3 {
+      color: green;
+    }
+    
+    .sidebar ul li {
+      background-color:bisque;
+      cursor: pointer;
+      padding: 5px;
+      margin-bottom: 10px;
+      border-radius:8px;
+    }
+    .sidebar  li:hover {
+      color:brown;
+    }
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 900px;
+      border: 2px solid lightblue;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="sidebar">
+    <h3>Menu Bar</h3>
+    <ul>
+      <li><a href="header1.jsp" target="mainFrame">Home</a></li>
+      <li><a href="products.jsp" target="mainFrame">Products</a></li>
+      <li><a href="cart.jsp" target="mainFrame">MyCart</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    
+    <iframe src="header1.jsp" name="mainFrame" title="Iframe Example"></iframe>
+  </div>
+</div>
+</body>
+</html>
